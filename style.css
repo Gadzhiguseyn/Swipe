@@ -1,5 +1,7 @@
 * {
     scroll-behavior: smooth;
+    transition: 0.5s;
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -7,37 +9,35 @@ body {
     margin: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     overflow-x: hidden;
-
 }
 
 .orangee {
     width: 60%;
     position: absolute;
     right: 0px;
-
 }
 
 header {
     background-color: rgb(255, 255, 255);
     margin: 0px;
-    height: 130vh;
-
+    /* height: 130vh; */
+    position: relative;
 }
 
 header i {
     font-size: 28px;
-
 }
 
 .header3 {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
     display: flex;
     flex-direction: column;
-    margin-left: 1410px;
-    margin-top: 200px;
 
 }
 
-header nav {
+header>nav {
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -69,48 +69,45 @@ header span button::before {
     top: 45px;
     left: 0px;
     transition: all 0.5s;
-
 }
 
 header span button:hover::before {
     width: 100%;
-
 }
 
 header a:hover {
     color: rgb(85, 85, 85);
-
 }
 
 header a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     transition: 0.2s;
-
 }
 
 .header1 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     width: 1200px;
+    padding: 0px 50px;
     top: 90px;
-
+    /* border: 5px solid blue; */
 }
 
 .header1 h1 {
+    width: 100%;
     font-size: 88px;
     letter-spacing: 5px;
-    margin-left: -220px;
     font-weight: lighter;
 
 }
 
-.header1 p {
+.header1>p {
+    width: 100%;
     font-size: 33px;
     letter-spacing: 1px;
-    margin-right: 560px;
     margin-top: -5px;
-
 }
 
 .header2 {
@@ -118,10 +115,11 @@ header a {
     background-color: rgba(255, 255, 255, 0);
     font-size: 22px;
     letter-spacing: 1px;
-    position: absolute;
-    left: 123px;
-    top: 780px;
-
+    /* position: absolute; */
+    /* left: 123px;
+    top: 780px; */
+    /* border: 5px solid red; */
+    margin-top: 100px !important;
 }
 
 .headbut1 {
@@ -158,11 +156,8 @@ header a {
     color: white;
     letter-spacing: 0.5px;
     font-weight: lighter;
-    position: relative;
-    top: 120px;
-    left: 97px;
     transition: 0.2s;
-
+    margin-top: 50px;
 }
 
 .headbut2:active {
@@ -180,12 +175,76 @@ header a {
     border: 0px;
     width: 15px;
     height: 15px;
-    position: relative;
-    right: 140px;
-    top: 340px;
+    position: absolute;
+    left: 90px;
+    bottom: 80px;
+}
+
+/* ====================================================Media================================================================== */
+@media screen and (max-width:1440px) {
+    .header1 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .orangee {
+        right: 0px;
+        top: 90px;
+    }
+
+    .header1 h1 {
+        font-size: 7vw;
+    }
+
+    .header1 p {
+        font-size: 3vw;
+    }
+
+    header>nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:770px) {
+    header span {
+        display: none;
+    }
+
+    .header1 h1 {
+        font-size: 9vw;
+    }
+
+    .header1 p {
+        font-size: 5vw;
+    }
+
+    .headbut2 {
+        width: 35vw;
+        height: 10vw;
+        font-size: 3vw;
+    }
 
 }
 
+@media screen and (max-width:430px) {
+    .header1 h1 {
+        font-size: 10vw;
+    }
+
+    .header1 p {
+        font-size: 6vw;
+    }
+
+    .headbut2 {
+        width: 40vw;
+        height: 10vw;
+        font-size: 4vw;
+    }
+}
+
+/* ====================================================Block_2================================================================== */
 
 div {
     padding: 45px 0px;
@@ -389,7 +448,7 @@ address span nav h3 {
 .address1 a:active {
     color: black;
 
-} 
+}
 
 .address1 button:active {
     transform: scale(0.90);
@@ -1342,11 +1401,4 @@ p a:hover {
 
 }
 
-@media screen and (max-width:1025px){
-    
-     
-
-
-
-
-}
+@media screen and (max-width:1025px) {}
